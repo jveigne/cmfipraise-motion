@@ -3,15 +3,7 @@
  * livre sans reformulation. Seules retouches : majuscule en début de phrase et coupes dans une phrase
  * (voir docs/storyboard-finances-ch1.md, § 4). `**…**` = mots mis en valeur.
  */
-export type Temps = { texte: string; reference?: string };
-
-export type Partie = {
-  id: string;
-  etiquette: string;
-  /** `pile` : les phrases s'empilent, `remplace` : chaque phrase remplace la précédente. */
-  mode: 'pile' | 'remplace';
-  temps: Temps[];
-};
+import type { Partie } from './moteur/frise';
 
 export const OUVERTURE = {
   livre: 'Enseignements sur les finances',

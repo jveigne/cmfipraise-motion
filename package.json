@@ -18,7 +18,8 @@
     "render:nehemie": "remotion render NehemieFR out/nehemie-fr.mp4",
     "render:caleb": "remotion render CalebFR out/caleb-fr.mp4",
     "render:gratuit": "remotion render GratuitFR out/gratuit-fr.mp4",
-    "render:finances:ch1": "remotion render FinancesCh1FR out/finances-ch1-fr.mp4"
+    "render:finances:ch1": "remotion render FinancesCh1FR out/finances-ch1-fr.mp4",
+    "render:finances": "bash scripts/rendre-finances.sh"
   },
   "dependencies": {
     "@remotion/cli": "4.0.528",

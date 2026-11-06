@@ -1,0 +1,21 @@
+/** Tous les mots écrits dans les illustrations de ce chapitre : ils doivent venir du texte du chapitre. */
+export const LIBELLES = {
+  entrees: 'les entrées',
+  sorties: 'les sorties',
+  integrite: 'intégrité',
+  seigneur: 'devant le Seigneur',
+  hommes: 'devant les hommes',
+  collecte: 'la collecte',
+  visionEnoncee: 'sa vision énoncée',
+  propreVision: 'sa propre vision',
+  commissaire: 'un commissaire aux comptes',
+  accompagnateur: 'un accompagnateur',
+  fardeau: 'fardeau',
+  dessein: 'dessein',
+  soupcons: 'soupçons',
+  compteRendu: 'compte rendu',
+  donateurs: 'ceux qui ont donné',
+  cahiers: 'les cahiers',
+  argent: 'l’argent',
+  depenses: 'les dépenses',
+} as const;

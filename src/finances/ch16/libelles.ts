@@ -1,0 +1,21 @@
+/** Tous les mots écrits dans les illustrations de ce chapitre : ils doivent venir du texte du chapitre. */
+export const LIBELLES = {
+  mission: 'mission',
+  nabal: 'Nabal',
+  david: 'David',
+  nations: 'les nations',
+  attestation: 'attestation',
+  evangile: 'l’Évangile',
+  jobParts: ['les pauvres', 'les veuves', 'les orphelins', 'les étrangers'],
+  mahanaim: 'Mahanaïm',
+  barzillai: 'Barzillaï',
+  ruisseaux: ['Barzillaï', 'la Sunamite', 'Priscille et Aquilas', 'Lydie'],
+  ouvrages: ['le tabernacle', 'le temple', 'la muraille'],
+  coffrets: ['l’or', 'l’encens', 'la myrrhe'],
+  egypte: 'Égypte',
+  nazareth: 'Nazareth',
+  apprentis: 'apprentis',
+  pourvoyeuses: 'pourvoyeuses',
+  proprietaires: 'propriétaires',
+  intendants: 'intendants',
+} as const;

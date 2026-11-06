@@ -1,0 +1,21 @@
+/** Tous les mots écrits dans les illustrations de ce chapitre : ils doivent venir du texte du chapitre. */
+export const LIBELLES = {
+  communion: 'la communion',
+  ouvrier: 'un ouvrier',
+  travail: 'un travail',
+  provision: 'une provision',
+  liste: 'la liste d’assistance',
+  besoin: 'le besoin',
+  vie: 'la vie menée',
+  francs: 'vingt-cinq francs',
+  tract: 'un tract',
+  siege: 'à ton nom',
+  ans: 'quatre cents ans',
+  israel: 'Israël',
+  egypte: 'l’Égypte',
+  veau: 'un veau d’or',
+  tabernacle: 'le tabernacle',
+  insense: 'un insensé',
+  idolatre: 'un idolâtre',
+  mondain: 'un mondain',
+} as const;
