@@ -3,13 +3,15 @@ import { interpolate, useCurrentFrame, Easing } from 'remotion';
 
 /**
  * Appui du doigt : un disque apparaît, se presse, puis une onde s'élargit.
- * `a` = image de l'appui. Coordonnées dans le repère du parent.
+ * `a` = image de l'appui. Coordonnées dans le repère du parent. `couleurOnde` : facultative
+ * (bleu CMFI par défaut) — la vidéo « Évènements » de Shephr la passe en mousse.
  */
-export const Toucher: React.FC<{ x: number; y: number; a: number; taille?: number }> = ({
+export const Toucher: React.FC<{ x: number; y: number; a: number; taille?: number; couleurOnde?: string }> = ({
   x,
   y,
   a,
   taille = 44,
+  couleurOnde = 'rgba(22,104,184,0.7)',
 }) => {
   const f = useCurrentFrame() - a;
   if (f < -8 || f > 22) return null;
@@ -34,7 +36,7 @@ export const Toucher: React.FC<{ x: number; y: number; a: number; taille?: numbe
           width: taille * 2,
           height: taille * 2,
           borderRadius: '50%',
-          border: '3px solid rgba(22,104,184,0.7)',
+          border: `3px solid ${couleurOnde}`,
           transform: `scale(${0.5 + onde * 1.2})`,
           opacity: f >= 0 ? 1 - onde : 0,
         }}

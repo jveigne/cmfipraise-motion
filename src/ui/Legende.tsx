@@ -8,6 +8,8 @@ import { Couleurs, Polices } from '../theme';
  * Dans une ligne, `*mot*` est mis en avant en bleu CMFI. `delais` : image d'apparition de
  * chaque ligne (par défaut, 6 images d'écart) — la seconde ligne d'un carton « question /
  * réponse » arrive ainsi après un temps de lecture.
+ * `police`, `couleur`, `couleurAccent` : facultatifs, pour une autre app que CMFIPraise (vidéo
+ * « Évènements » de Shephr) ; absents, le rendu est celui de la vidéo « Catégories ».
  */
 export const Legende: React.FC<{
   lignes: string[];
@@ -16,7 +18,20 @@ export const Legende: React.FC<{
   sortie?: number;
   taille?: number;
   delais?: number[];
-}> = ({ lignes, duree, debut = 0, sortie = 10, taille = 92, delais }) => {
+  police?: string;
+  couleur?: string;
+  couleurAccent?: string;
+}> = ({
+  lignes,
+  duree,
+  debut = 0,
+  sortie = 10,
+  taille = 92,
+  delais,
+  police = Polices.serif,
+  couleur = Couleurs.encre,
+  couleurAccent = Couleurs.bleuCmfi,
+}) => {
   const frame = useCurrentFrame() - debut;
   const { fps } = useVideoConfig();
 
@@ -42,12 +57,12 @@ export const Legende: React.FC<{
           <div
             key={i}
             style={{
-              fontFamily: Polices.serif,
+              fontFamily: police,
               fontWeight: 600,
               fontSize: taille,
               lineHeight: 1.12,
               letterSpacing: -1.5,
-              color: Couleurs.encre,
+              color: couleur,
               opacity: p,
               transform: `translateY(${interpolate(p, [0, 1], [40, 0], {
                 easing: Easing.out(Easing.quad),
@@ -56,7 +71,7 @@ export const Legende: React.FC<{
           >
             {ligne.split(/(\*[^*]+\*)/).map((morceau, j) =>
               morceau.startsWith('*') ? (
-                <span key={j} style={{ color: Couleurs.bleuCmfi }}>
+                <span key={j} style={{ color: couleurAccent }}>
                   {morceau.slice(1, -1)}
                 </span>
               ) : (

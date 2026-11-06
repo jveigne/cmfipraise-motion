@@ -5,7 +5,20 @@
   "scripts": {
     "studio": "remotion studio",
     "render:fr": "remotion render CategoriesFR out/categories-fr.mp4",
-    "render:en": "remotion render CategoriesEN out/categories-en.mp4"
+    "render:en": "remotion render CategoriesEN out/categories-en.mp4",
+    "render:evenements": "remotion render EvenementsFR out/evenements-fr.mp4",
+    "render:journal": "remotion render JournalFR out/journal-fr.mp4",
+    "render:journal:en": "remotion render JournalEN out/journal-en.mp4",
+    "render:documents": "remotion render DocumentsFR out/documents-fr.mp4",
+    "render:etude": "remotion render EtudeFR out/etude-fr.mp4",
+    "render:etude:en": "remotion render EtudeEN out/etude-en.mp4",
+    "render:guide": "remotion render GuideFR out/guide-fr.mp4",
+    "render:guide:en": "remotion render GuideEN out/guide-en.mp4",
+    "render:bertoua": "remotion render BertouaFR out/bertoua-fr.mp4",
+    "render:nehemie": "remotion render NehemieFR out/nehemie-fr.mp4",
+    "render:caleb": "remotion render CalebFR out/caleb-fr.mp4",
+    "render:gratuit": "remotion render GratuitFR out/gratuit-fr.mp4",
+    "render:finances:ch1": "remotion render FinancesCh1FR out/finances-ch1-fr.mp4"
   },
   "dependencies": {
     "@remotion/cli": "4.0.528",
@@ -16,6 +29,12 @@
     "remotion": "4.0.528"
   },
   "devDependencies": {
+    "@fontsource/fraunces": "^5.3.0",
+    "@fontsource/instrument-sans": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/newsreader": "^5.3.0",
+    "@remotion/fonts": "^4.0.528",
     "@types/react": "19.1.10",
     "typescript": "5.9.2"
   }

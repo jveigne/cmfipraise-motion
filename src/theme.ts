@@ -2,8 +2,7 @@
  * Couleurs et polices de l'app (reprises de cmfipraise-app/constants/theme.ts et des styles
  * des écrans), pour que le motion paraisse la suite naturelle de l'app.
  */
-import { loadFont as chargerNewsreader } from '@remotion/google-fonts/Newsreader';
-import { loadFont as chargerInstrumentSans } from '@remotion/google-fonts/InstrumentSans';
+import { chargerPolice } from './polices';
 
 export const Couleurs = {
   bleuCmfi: '#1668B8',
@@ -29,16 +28,9 @@ export const Couleurs = {
   boutonPresentation: '#374151',
 } as const;
 
-const newsreader = chargerNewsreader('normal', { weights: ['400', '600'], subsets: ['latin'] });
-chargerNewsreader('italic', { weights: ['400'], subsets: ['latin'] });
-const instrument = chargerInstrumentSans('normal', {
-  weights: ['400', '500', '600'],
-  subsets: ['latin'],
-});
-
 export const Polices = {
-  serif: newsreader.fontFamily,
-  sans: instrument.fontFamily,
+  serif: chargerPolice('Newsreader', 'newsreader', { normal: ['400', '600'], italic: ['400'] }),
+  sans: chargerPolice('Instrument Sans', 'instrument-sans', { normal: ['400', '500', '600'] }),
 } as const;
 
 /** 30 images par seconde : le storyboard est découpé en secondes, 1 s = 30 images. */
