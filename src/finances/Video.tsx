@@ -7,3 +7,4 @@ const VIDEO = creerVideo({ ouverture: OUVERTURE, fin: FIN, parties: PARTIES, ill
 
 export const VideoFinancesCh1 = VIDEO.Composant;
 export const DUREE_FINANCES_CH1 = VIDEO.duree;
+export const VignetteFinancesCh1 = VIDEO.Vignette;

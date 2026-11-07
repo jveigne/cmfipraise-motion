@@ -253,3 +253,18 @@ des finances), en illustrations animées et en phrases du livre. Storyboard :
 - Tout est dans `src/finances/` : `textes.ts` (phrases du livre), `frise.ts` (durées calculées depuis les
   textes), `theme.ts`, `ui/Illustrations.tsx` (une illustration par partie), `Video.tsx`.
 - `node scripts/stills-finances.mjs` : images de contrôle dans `out/stills/finances-ch1/`.
+
+### Chapitres 2 à 25
+
+Même méthode que le chapitre 1, à partir de `docs/storyboard-finances-chNN.md`. Compositions
+`FinancesCh02FR` à `FinancesCh25FR`, vidéos `out/finances-chNN-fr.mp4`.
+
+- `npm run render:finances` : rend les chapitres pas encore rendus, un par un ;
+  `bash scripts/rendre-finances.sh 7 12` : refait ces chapitres-là.
+- `src/finances/moteur/` : le moteur commun (durées, mise en page, briques de dessin), aussi utilisé par
+  le chapitre 1. `src/finances/chNN/` : `textes.gen.ts` (généré depuis le § 4 du storyboard par
+  `node scripts/generer-finances.mjs N`, ne pas le retoucher), `Illustrations.tsx`, `libelles.ts` (les mots
+  écrits dans les dessins), `reglages.ts` (mise en page du texte), `entree.tsx` (entrée isolée).
+- Contrôle : `node scripts/controler-finances.mjs N [--plans p3,p4] [--pas K]` (images fixes) et
+  `CHAPITRES_FINANCES=<dossier des textes> node scripts/verifier-libelles-finances.mjs N`.
+- Défauts relevés à la relecture : `docs/defauts-finances.md`.

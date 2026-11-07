@@ -219,5 +219,27 @@ export const creerVideo = (c: Chapitre) => {
     );
   };
 
-  return { Composant, duree, frise };
+  /** Vignette YouTube (1920 × 1080, réduite ensuite à 1280 × 720) : l'illustration d'ouverture à sa dernière image, le titre en grand. */
+  const Vignette: React.FC = () => {
+    const Illu = c.illustrations.ouverture;
+    const o = c.ouverture;
+    const titre = insecables(o.titre);
+    const corps = o.titre.length > 52 ? 78 : o.titre.length > 34 ? 90 : 104;
+    return (
+      <AbsoluteFill style={{ backgroundColor: F.parchemin }}>
+        <div style={{ position: 'absolute', left: 70, top: 90 }}>
+          <Illu f={frise[0].duree - 1} d={[]} duree={frise[0].duree} />
+        </div>
+        <div style={{ position: 'absolute', left: 930, top: 0, width: 920, height: 1080, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div style={{ fontFamily: PoliceF.sans, fontSize: 34, fontWeight: 600, letterSpacing: 2, color: F.encre2, textTransform: 'uppercase' }}>{o.livre}</div>
+          <div style={{ fontFamily: PoliceF.serif, fontStyle: 'italic', fontSize: 72, fontWeight: 400, color: F.orFonce, marginTop: 28 }}>{o.chapitre}</div>
+          <div style={{ fontFamily: PoliceF.serif, fontSize: corps, fontWeight: 600, lineHeight: 1.08, color: F.encre, marginTop: 14 }}>{titre}</div>
+          <div style={{ width: 120, height: 8, backgroundColor: F.or, marginTop: 44, borderRadius: 4 }} />
+          <div style={{ fontFamily: PoliceF.sans, fontSize: 40, fontWeight: 600, color: F.encre, marginTop: 30 }}>{o.auteur}</div>
+        </div>
+      </AbsoluteFill>
+    );
+  };
+
+  return { Composant, duree, frise, Vignette };
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Composition } from 'remotion';
+import { Composition, Still } from 'remotion';
 import { FPS } from './theme';
 import { DUREE_TOTALE, Video } from './Video';
 import { DUREE_EVENEMENTS, VideoEvenements } from './evenements/Video';
@@ -11,7 +11,7 @@ import { DUREE_BERTOUA, VideoBertoua } from './bertoua/Video';
 import { DUREE_NEHEMIE, VideoNehemie } from './nehemie/Video';
 import { DUREE_CALEB, VideoCaleb } from './caleb/Video';
 import { DUREE_GRATUIT, VideoGratuit } from './gratuit/Video';
-import { DUREE_FINANCES_CH1, VideoFinancesCh1 } from './finances/Video';
+import { DUREE_FINANCES_CH1, VideoFinancesCh1, VignetteFinancesCh1 } from './finances/Video';
 import { VIDEO_CH02 } from './finances/ch02/index';
 import { VIDEO_CH03 } from './finances/ch03/index';
 import { VIDEO_CH04 } from './finances/ch04/index';
@@ -81,5 +81,31 @@ export const Root: React.FC = () => (
     <Composition id="FinancesCh23FR" component={VIDEO_CH23.Composant} durationInFrames={VIDEO_CH23.duree} fps={FPS} width={1920} height={1080} />
     <Composition id="FinancesCh24FR" component={VIDEO_CH24.Composant} durationInFrames={VIDEO_CH24.duree} fps={FPS} width={1920} height={1080} />
     <Composition id="FinancesCh25FR" component={VIDEO_CH25.Composant} durationInFrames={VIDEO_CH25.duree} fps={FPS} width={1920} height={1080} />
+    {/* Vignettes YouTube de la série finances (rendues par scripts/vignettes-finances.sh). */}
+    <Still id="VignetteFinancesCh01" component={VignetteFinancesCh1} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh02" component={VIDEO_CH02.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh03" component={VIDEO_CH03.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh04" component={VIDEO_CH04.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh05" component={VIDEO_CH05.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh06" component={VIDEO_CH06.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh07" component={VIDEO_CH07.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh08" component={VIDEO_CH08.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh09" component={VIDEO_CH09.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh10" component={VIDEO_CH10.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh11" component={VIDEO_CH11.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh12" component={VIDEO_CH12.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh13" component={VIDEO_CH13.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh14" component={VIDEO_CH14.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh15" component={VIDEO_CH15.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh16" component={VIDEO_CH16.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh17" component={VIDEO_CH17.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh18" component={VIDEO_CH18.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh19" component={VIDEO_CH19.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh20" component={VIDEO_CH20.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh21" component={VIDEO_CH21.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh22" component={VIDEO_CH22.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh23" component={VIDEO_CH23.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh24" component={VIDEO_CH24.Vignette} width={1920} height={1080} />
+    <Still id="VignetteFinancesCh25" component={VIDEO_CH25.Vignette} width={1920} height={1080} />
   </>
 );
